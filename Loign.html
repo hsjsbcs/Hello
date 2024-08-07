@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  font-weight: border-box;
+  padding-top: -200px;
+  font-family: 'Merriweather', serif;
+}
+/* navbar */
+#navbar{
+  background-color: rgb(67 0 86);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+#logo{
+  margin-left: 15px;
+  color: #ffc800;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+#logo span{
+  color: #ffc800;
+}
+#logo #span1{
+  color: white;
+  font-size: 24px;
+}
+.navbar-nav{
+  margin-left: 30px;
+}
+.nav-item{
+  margin-left: 1px;
+}
+.nav-item .nav-link{
+  margin-left: 1px;
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+  color: #ffc800;
+}
+
+.dropbtn {
+  background-color: rgb(67 0 86);
+  color: white;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  transition: 0.5s ease;
+}
+.dropbtn:hover{
+  color: #ffc800;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  height:180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 3px 16px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: block;
+  transition: 0.5s ease;
+}
+.dropdown-content a:hover{
+  color: #ffc800;
+}
+
+.dropdown-content a:hover {background-color: black;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgb(67 0 86);}
+
+a,
+a:hover{
+  text-decoration: none;
+}
+
+.searchBox{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchText{
+  width: 13rem;
+  height: 5vh;
+  padding: -1px;
+  margin-right: 10px;
+  background-color: white;
+  padding-left: 7px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  transition: all 0.3s linear;
+}
+.searchText:focus{
+  outline: none;
+}
+.searchBtn{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+  color: royalblue;
+  position: absolute;
+  display: grid;
+  margin-right:5px;
+  right:1px;
+  font-size: 12px;
+  place-items: center;
+  transition: all 0.5s linear;
+}
+/* navbar */
+
+
+#login{
+    width: 65%;
+    height: 70vh;
+    background-color: rgb(67 0 86);
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: rgb(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#side1 h3{
+    margin-top: 220px;
+    font-weight: bold;
+    color: #ffc800;
+}
+#side2{
+    height: 70vh;
+    background-color: white;
+    border-radius: 10px;
+}
+#side2 h3{
+    margin-top: 35px;
+    color: #ffc800;
+    text-shadow: 0px 1px 1px black;
+}
+#side2 p{
+    font-size: 18px;
+    color: black;
+}
+.input2 input{
+    margin-top: 15px;
+    border: none;
+    width: 400px;
+    border-bottom: 2px solid #ffc800;
+}
+.input2 input:focus{
+  border: none;
+}
+.input2 input ::placeholder{
+    font-weight: bold;
+}
+#btnlogin{
+    padding-top: 20px;
+}
+#btnlogin a{
+    padding: 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: #ffc800;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s ease;
+}
+#btnlogin a:hover{
+    background-color: #ffc800;
+    color: white;
+} 
+/* input */
+#newslater{
+  margin-top: 100px;
+}
+#newslater h3{
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+.input{
+  margin-top: 20px;
+}
+.input input{
+  width: 350px;
+  margin-top: 10px;
+  height: 36px;
+  border: 1px solid black;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+#subscribe{
+  width: 200px;
+  height: 36px;
+  border: none;
+  background-color: rgb(67 0 86);
+  font-family: sans-serif;
+  color: white;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+#subscribe:hover{
+  background-color: #ffc800;
+  color: black;
+}
+/* input */
+
+
+
+#footer{
+  padding: 0 0 16px 0px;
+  color: white;
+  margin-top: 100px;
+  margin-left: -200px;
+}
+#footer .footer-top{
+  padding: 60px 0 30px 0px;
+  color: white;
+  background-color: rgb(67 0 86);
+  height: 410px;
+  margin: 0 0 -90px 0px;
+  padding-left: 200px;
+  width: 1780px;
+}
+#footer .footer-top .footer-contact{
+    margin-bottom: 90px;
+}
+#footer .footer-top .footer-contact h3{
+    color: #ffc800;
+    font-weight: 100;
+}
+#footer .footer-top .footer-contact p{
+    color: white;
+    line-height: 22px;
+    font-size: 14px;
+}
+#footer .footer-top .footer-links h4{
+    color: #ffc800;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-top: 10px;
+}
+#footer .footer-top .footer-links p{
+    color: white;
+    font-size: 14px;
+}
+#footer .footer-top .footer-links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#footer .footer-top .footer-links ul li{
+    display: flex;
+    text-align: center;
+}
+#footer .footer-top .footer-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 2px 0;
+    font-size: 15px;
+    line-height: 29px;
+    transition: 0.5s ease;
+}
+#footer .footer-top .footer-links ul li a:hover{
+    color: #ffc800;
+    text-decoration: underline;
+}
+#footer .socail-links i{
+    width: 35px;
+    height: 36px;
+    color: white;
+    padding: 8px 0;
+    margin: 2px;
+    font-size: 22px;
+    background-color: #373737;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+#footer .socail-links i:hover{
+   background-color: #ffc800;
+   color: white;
+}
+#footer .copyright{
+  float: left;
+  text-align: center;
+}
+#footer .cradts{
+  float: right;
+  text-align: center;
+  margin-right: -20px;
+}
+#footer .cradts a{
+  color: #ffc800;
+  text-decoration: underline;
+}
+#footer .cradts a:hover{
+    color: #ffc800;
+    text-decoration: none;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+.arrow{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  bottom: 50px;
+  text-decoration: none;
+  text-align: center;
+
+}
+</style>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="logo">E<span id="span1">Lectronic</span><span>Shop</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="images/menu.png" alt="" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Product</a>
+          </li>
+          <div class="dropdown">
+          <button class="dropbtn">Category</button>
+          <div class="dropdown-content">
+          <a href="Smart Phone.html">Smart Phone</a>
+          <a href="#">Smart Watch</a>
+          <a href="#">Headphone</a>
+          <a href="#">Laptop</a>
+          <a href="#">PC Moniter</a>
+          </div>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+        </ul>
+        <form>
+          <div class="search-container">
+            <form>
+              <div class="searchBox">
+                <input type="text" name="text" class="searchText" placeholder="Search..">
+                <a href="#" class="searchBtn">
+                  <i class="fas fa-search fa-2x"></i>
+                </a>
+              </div>
+            </form>
+          </div>
+          <div>
+            <a href="Register.html" style="color: white; text-decoration: none; margin-right: 10px; font-size: 20px;">Register</a>
+          </div>
+
+          <div>
+            <a href="Loign.html" style="color: white; text-decoration: none; margin-right: 10px; font-size: 20px;">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- navbar -->
+
+<div class="container" id="login">
+<div class="row">
+<div class="col-md-5 py-3 py-md-0" id="side1">
+<h3 class="text-center">Welcome Back!</h3>
+</div>
+<div class="col-lg-7 py-3 py-md-0" id="side2">
+<h3 class="text-center">Account Lgin</h3>
+<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, tempore?</p>
+<div class="input2 text-center">
+<input type="text" placeholder="User Name">
+<input type="password" placeholder="Password">
+<p class="text-center" id="btnlogin"><a href="#">Log in</a></p>
+<p class="text-center">Forgot Password<a href="#">Click</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+  
+  <div class="container" id="newslater">
+  <h3 class="text-center">Subscribe To The Electronic Shop For Latest upload.</h3>
+  <div class="input text-center">
+  <input type="text" placeholder="Enter Your Email..">
+  <button id="subscribe">SUBSCRIBE</button>
+  </div>
+  </div>
+  
+  
+  
+  
+  <footer id="footer">
+  <div class="footer-top">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-3 col-md-6 footer-contact">
+  <h3>Electronic Shop</h3>
+  <p>
+  Karachi <br>
+  Sindh <br>
+  Pakistan <br>
+  <strong>Phone:</strong> +00000000000000 <br>
+  <strong>Email:</strong> electronicshop@.com
+  </p>
+  </div>
+  <div class="col-lg-3 col-md-6 footer-links">
+    <h4>Usefull Links</h4>
+    <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Terms of service</a></li>
+    <li><a href="#">Privacy policey</a></li>
+    </ul>
+    </div>
+    
+  <div class="col-lg-3 col-md-6 footer-links">
+    <h4>Our Services</h4>
+    <ul>
+    <li><a href="#">PS 5</a></li>
+    <li><a href="#">Computer</a></li>
+    <li><a href="#">Gaming Laptop</a></li>
+    <li><a href="#">Mobile Phone</a></li>
+    <li><a href="#">Gaming Gadget</a></li>
+    </ul>
+    </div>
+    
+  <div class="col-lg-3 col-md-6 footer-links">
+    <h4>Our Social Networks</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. aut.</p>
+    <div class="socail-links mt-3">
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    </div>
+  </div>
+  </div>
+  <hr>
+  <div class="container py-3">
+  <div class="copyright">
+  &copy; Copyright <strong><span>Electronic Shop</span></strong>. All Rights Reserved
+  </div>
+  <div class="cradts">
+  Designed by <a href="#">Ayan Bhashwan</a>
+  </div>
+  </div>
+  </div>
+  </footer>
+    
+  
+  
+  <a href="#" class="arrow"><img src="images/arrow.png" alt=""></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+</body>
+</html>
